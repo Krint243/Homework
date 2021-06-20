@@ -1,44 +1,25 @@
 package Lesson1;
 
+import java.util.Scanner;
+
 public class Lesson1 {
     public static void main(String[] args) {
-        PrintThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
+        System.out.println(Method1());
     }
 
-    public static void PrintThreeWords() {
-        System.out.println("_Orange");
-        System.out.println("_Banana");
-        System.out.println("_Apple");
-    }
+    static boolean Method1() {
 
-    public static void checkSumSign() {
-        int a = -6;
-        int b = 5;
-        if (a + b >= 0) {
-            System.out.println("Сумма положительная!");
-        } else
-            System.out.println("Сумма отрицательная!");
-    }
 
-    public static void printColor() {
-        int value = -666;
-        if (value <= 0) {
-            System.out.println("Красный!");
-        } else if (value > 0 && value <= 100) {
-            System.out.println("Желтый!");
-        } else {
-            System.out.println("Зеленый!");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите число");
+        int a = sc.nextInt();
+        System.out.println("Введите число");
+        int b = sc.nextInt();
+        sc.close();
+        System.out.println("Введены числа: " + a + " и " + b);
+        if (a + b >= 10 && a + b <= 20) {
+            return true;
         }
-    }
-
-    public static void compareNumbers() {
-        int a = 10;
-        int b = 15;
-        if (a >= b) {
-            System.out.println("a >= b");
-        } else System.out.println("a < b");
+            return false;
     }
 }
