@@ -24,9 +24,7 @@ public class Lesson3 {
         maxminmassiv();
         System.out.println();
         System.out.println("Задание 7");
-//        System.out.println(checkBalance( int[] arr = new int {
-//            10, 19, 20, 34, 11, 20, 30
-//        }));
+        checkBalance(new int[]{1, 0, 3, 3, 0, 7});
 
 
     }
@@ -117,14 +115,62 @@ public class Lesson3 {
         System.out.println("Максимальный элемент массива: " + Max);
         System.out.println("Минимальный элемент массива:  " + Min);
     }
+
+    public static void checkBalance(int[] array) {
+        System.out.println("Исходный массив:     " + Arrays.toString(array));
+        int SumLL = 0;
+        int SumRR = 0;
+        int SumTotal = 0;
+        int SumLR = 0;
+        int SumRL = 0;
+        for (int i = 0; i < array.length; i++) {
+            SumTotal += array[i];
+
+        }
+        System.out.println("Сумма всех элементов массива: " + SumTotal);
+        for (int i = 1; i < array.length - 1; i++) {
+            SumLL += array[i - 1];
+            SumRR = SumTotal - SumLL;
+            if (SumRR == SumLL) {
+                System.out.println("SumL: " + SumLL + " == " + "SumR: " + SumRR + " - True");
+                break;
+            } else if (i == array.length - 2) {
+                System.out.println("В массиве нет места где сумма элементов массива равна - False");
+            } else
+                continue;
+        }
+
+
+    }
+//        System.out.println("В массиве нет места где сумма элементов массива равна - False");
+//            for (int j = 1; j < array.length - 1; j++) {
+//                SumLR += array[j - 1];
+//                SumRL = SumTotal - SumLR;
+//                if (SumRR == SumLL || SumRL == SumLR) {
+//                    System.out.println("SumL: " + SumLL + " == " + "SumR: " + SumRR);
+////
+//        break;
+////                } else
+////                    continue;   }
+
+
 }
-//    public static boolean checkBalance(int[]arr) {
-//        for (int i = 0; i < arr.length; i++) {
-//            if (arr[i])
-//        }
-//
-//
-//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
