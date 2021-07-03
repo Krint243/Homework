@@ -5,11 +5,11 @@ public class Animal {
     static int an;
 
     public Animal() {
-
+        an++;
     }
     public Animal(String name) {
         this.name = name;
-        an++;
+
 
     }
 
