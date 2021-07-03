@@ -10,7 +10,7 @@ public class Dog extends Animal {
 
     }
 
-    public int howMuchDogs() {
+    public static int howMuchDogs() {
         return d;
 
 

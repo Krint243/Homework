@@ -13,7 +13,7 @@ public class Animal {
 
     }
 
-    public int howMuchAnimals() {
+    public static int howMuchAnimals() {
         return an;
     }
 
