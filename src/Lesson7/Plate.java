@@ -1,23 +1,30 @@
 package Lesson7;
 
+
 public class Plate {
-    static int food;
-  private static boolean hangry;
+    private int food;
+    public boolean f;
 
     public Plate(int food) {
         this.food = food;
     }
 
+
     public void decreaseFood(int n) {
         if (food - n >= 0) {
             food -= n;
-            Cat.setHangry(true);
-return;
+            f = true;
+
+
+            return;
         }
         if (food - n < 0)
-            Cat.setHangry(false);
-return;
+            f = false;
+        return;
 
+    }
+    public void increaseFood(int n) {
+        food += n;
     }
 
 
